@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LoginFormJava</string>
+    <string name="backgroundimage">BackgroundImage</string>
+    <string name="enter_the_email_id">Email Id</string>
+    <string name="enter_the_phone_number">Phone Number</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="signin">Sign In</string>
+    <string name="signin_image">SignIn Image</string>
+</resources>
