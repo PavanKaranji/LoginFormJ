@@ -18,6 +18,8 @@ public class WelcomeScreen extends AppCompatActivity {
     ImageButton edit1,edit2,edit3,edit4;
     EditText editEmail,editPhNum,editFname,editLname;
     Button saveChanges,showAllUsers;
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    String namePattern = "[a-zA-Z.\\s]+";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -90,8 +92,22 @@ public class WelcomeScreen extends AppCompatActivity {
                 String phoneNum = editPhNum.getText().toString();
                 String firstName = editFname.getText().toString();
                 String lastName = editLname.getText().toString();
-                updateUser(mailID,phoneNum,firstName,lastName);
 
+                if(mailID.equals("") ){
+                    toast("Please fill Email Id");
+                    editEmail.setError("Please fill Email Id");
+                } else if(phoneNum.equals("") ){
+                    toast("Please fill Phone Number");
+                    editPhNum.setError("Please fill Phone Number");
+                }else if(firstName.equals("") ){
+                    toast("Please fill First Name");
+                    editFname.setError("Please fill First Name");
+                }else if(lastName.equals("")){
+                    toast("Please fill Last Name");
+                    editLname.setError("Please fill Last Name");
+                }else{
+                    validate(mailID,phoneNum,firstName,lastName);
+                }
 
             }
         });
@@ -103,6 +119,28 @@ public class WelcomeScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void validate(String mailId, String phoneNumber, String firstName, String lastName){
+        if(!mailId.matches(emailPattern)){
+            editEmail.setError("Invalid E-mailId");
+            toast("Invalid E-mailId");
+        }else if(phoneNumber.length()<10){
+            editPhNum.setError("Enter 10 digit phone Number");
+            toast("Enter 10 digit phone Number");
+        }else if(!firstName.matches(namePattern)){
+            editFname.setError("Invalid First Name");
+            toast("Invalid First Name");
+        }else if(!lastName.matches(namePattern)){
+            editLname.setError("Invalid Last Name");
+            toast("Invalid Last Name");
+        }else{
+            updateUser(mailId,phoneNumber,firstName,lastName);
+        }
+    }
+
+    public void toast(String text){
+        Toast.makeText(WelcomeScreen.this,text,Toast.LENGTH_LONG).show();
     }
 
     public void enableSave(){

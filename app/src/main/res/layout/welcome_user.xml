@@ -50,6 +50,7 @@
             android:enabled="false"
             android:background="@drawable/edit_background"
             android:layout_weight="6"
+            android:maxLength="10"
             android:layout_height="match_parent"/>
         <ImageButton
             android:id="@+id/editPhoneNumber"
