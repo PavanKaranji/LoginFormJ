@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:alpha="0.7"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="User Data"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:text="Email ID"
+            android:layout_width="0dp"
+            android:padding="5sp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:text="Phone Number"
+            android:layout_width="0dp"
+            android:padding="5sp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:text="First Name"
+            android:layout_width="0dp"
+            android:padding="5sp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:text="Last Name"
+            android:layout_width="0dp"
+            android:padding="5sp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/myList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

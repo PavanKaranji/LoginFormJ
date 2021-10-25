@@ -7,4 +7,6 @@
     <string name="last_name">Last Name</string>
     <string name="signin">Sign In</string>
     <string name="signin_image">SignIn Image</string>
+    <string name="welcome">Welcome....</string>
+    <string name="save_changes">Save Changes</string>
 </resources>
