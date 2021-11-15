@@ -9,4 +9,9 @@
     <string name="signin_image">SignIn Image</string>
     <string name="welcome">Welcome....</string>
     <string name="save_changes">Save Changes</string>
+    <string name="user_data">User Data</string>
+    <string name="edit">Edit</string>
+    <string name="show_all_users">Show All Users</string>
+    <string name="email_id">Email Id</string>
+    <string name="phone_num">Phone Num</string>
 </resources>

@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class CustomeAdapter extends ArrayAdapter {
+public class CustomeAdapter extends ArrayAdapter<Object> {
 
     List<UserData> users;
     LayoutInflater inflater;
@@ -22,7 +22,7 @@ public class CustomeAdapter extends ArrayAdapter {
         inflater = LayoutInflater.from(context);
     }
 
-    class ViewHolder{
+    static class ViewHolder{
         TextView email;
         TextView phNum;
         TextView fName;
@@ -39,7 +39,7 @@ public class CustomeAdapter extends ArrayAdapter {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         final UserData user = users.get(position);
-        ViewHolder holder = null;
+        ViewHolder holder;
         if(convertView == null){
             convertView = inflater.inflate(R.layout.table_view,parent,false);
             holder = new ViewHolder();

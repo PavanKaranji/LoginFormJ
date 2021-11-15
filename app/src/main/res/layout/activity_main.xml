@@ -42,7 +42,8 @@
             android:hint="@string/enter_the_email_id"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
-            android:textColorHint="@color/black"/>
+            android:textColorHint="@color/black"
+            android:autofillHints="Email Id" />
 
         <EditText
             android:id="@+id/phoneNumber"
@@ -69,7 +70,8 @@
             android:hint="@string/first_name"
             android:inputType="text"
             android:minHeight="48dp"
-            android:textColorHint="@color/black"/>
+            android:textColorHint="@color/black"
+            android:autofillHints="First Name" />
 
         <EditText
             android:id="@+id/lastName"
@@ -81,7 +83,8 @@
             android:hint="@string/last_name"
             android:inputType="text"
             android:minHeight="48dp"
-            android:textColorHint="@color/black"/>
+            android:textColorHint="@color/black"
+            android:autofillHints="Last Name" />
 
         <Button
             android:id="@+id/signIn"
